@@ -2208,10 +2208,11 @@ a.ev-card {
   }
 }
 
-/* Lucide icon styling */
+/* Font Awesome icon styling */
 .dd-icon i, .dcard-icon i, .cap-icon i, .strat-icon i, .ci-icon i {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1;
+  color: inherit;
 }
 
 /* Hero accent — neon text glow */
