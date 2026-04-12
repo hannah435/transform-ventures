@@ -2208,6 +2208,12 @@ a.ev-card {
   }
 }
 
+/* Lucide icon styling */
+.dd-icon i, .dcard-icon i, .cap-icon i, .strat-icon i, .ci-icon i {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 /* Hero accent — neon text glow */
 [data-theme="dark"] .hero h1 .accent {
   filter: drop-shadow(0 0 20px rgba(124, 77, 189, 0.3));
