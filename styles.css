@@ -123,6 +123,9 @@ img{max-width:100%;display:block}
 .container{max-width:1180px;margin:0 auto;padding:0 24px}
 ::selection{background:rgba(124,77,189,.2);color:#fff}
 
+/* Screen reader only */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
 /* ===== ANIMATIONS ===== */
 .rv{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .rv.vis{opacity:1;transform:none}
