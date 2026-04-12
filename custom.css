@@ -2203,6 +2203,17 @@ a.ev-card {
     justify-content: center;
   }
 
+  .strat-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 16px !important;
+  }
+  .strat-inner {
+    min-height: auto !important;
+  }
+
   .nav-logo img {
     height: 60px !important;
   }
