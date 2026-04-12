@@ -1062,10 +1062,10 @@
     top: 70px;
     left: 16px;
     right: 16px;
-    bottom: auto;
+    bottom: 16px;
     width: auto;
-    max-height: calc(100dvh - 90px);
-    background: rgba(40, 18, 90, 0.4) !important;
+    height: auto;
+    background: rgba(40, 18, 90, 0.45) !important;
     backdrop-filter: blur(40px) !important;
     -webkit-backdrop-filter: blur(40px) !important;
     padding: 28px 24px !important;
