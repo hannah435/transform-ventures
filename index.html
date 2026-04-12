@@ -821,21 +821,44 @@ addEventListener('scroll',()=>{document.getElementById('header').classList.toggl
 
 // Mobile nav
 const nt=document.getElementById('navToggle'),nl=document.getElementById('navLinks');
-nt.addEventListener('click',()=>{nt.classList.toggle('active');nl.classList.toggle('active');document.body.style.overflow=nl.classList.contains('active')?'hidden':''});
-document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{nt.classList.remove('active');nl.classList.remove('active');document.body.style.overflow=''})});
-
-// Mobile dropdown toggle — prevent scroll, just expand/collapse
 const ddLink=document.querySelector('.nav-dropdown > a');
+const isMobile=()=>window.innerWidth<=968;
+
+nt.addEventListener('click',()=>{
+  nt.classList.toggle('active');
+  nl.classList.toggle('active');
+  document.body.style.overflow=nl.classList.contains('active')?'hidden':'';
+});
+
+// Close menu on link click — but NOT on the Divisions toggle
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',function(){
+    if(this===ddLink && isMobile()) return; // don't close menu when toggling dropdown
+    nt.classList.remove('active');
+    nl.classList.remove('active');
+    document.body.style.overflow='';
+    document.querySelector('.nav-dropdown').classList.remove('open');
+  });
+});
+
+// Mobile dropdown toggle
 ddLink.addEventListener('click',function(e){
-  if(window.innerWidth<=968){
+  if(isMobile()){
     e.preventDefault();
-    e.stopPropagation();
+    e.stopImmediatePropagation();
     this.parentElement.classList.toggle('open');
   }
 });
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)scrollTo({top:t.offsetTop-80,behavior:'smooth'})})});
+// Smooth scroll — skip the Divisions link on mobile
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    if(this===ddLink && isMobile()) return; // handled by dropdown toggle
+    e.preventDefault();
+    const t=document.querySelector(this.getAttribute('href'));
+    if(t) scrollTo({top:t.offsetTop-80,behavior:'smooth'});
+  });
+});
 
 // Counter
 const co=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const el=en.target,tg=+el.dataset.count;let cur=0;const st=tg/35;const tm=setInterval(()=>{cur+=st;if(cur>=tg){cur=tg;clearInterval(tm)}el.textContent=Math.round(cur)+'+'}, 30);co.unobserve(el)}})},{threshold:.5});
