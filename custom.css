@@ -1021,6 +1021,14 @@
 .nav-logo img { height: 100px !important; }
 .ft-brand img { height: 80px !important; }
 
+/* Mobile nav fixes */
+@media (max-width: 640px) {
+  .nav-logo img { height: 60px !important; }
+  .nav-inner { height: 64px; }
+  .nav-toggle { display: flex !important; align-items: center; justify-content: center; }
+  .theme-toggle { display: flex !important; }
+}
+
 /* Hero accent — neon text glow */
 [data-theme="dark"] .hero h1 .accent {
   filter: drop-shadow(0 0 20px rgba(124, 77, 189, 0.3));
