@@ -2227,7 +2227,7 @@ a.ev-card {
   .ft-top { grid-template-columns: 1fr 1fr !important; gap: 20px 24px !important; margin-bottom: 32px !important; }
   .ft-brand { grid-column: 1 / -1; }
   .ft-brand p { display: none; }
-  .ft-brand img { height: 50px !important; margin-bottom: 8px !important; }
+  .ft-brand img { height: 80px !important; margin-bottom: 12px !important; }
   .ft-col h4 { font-size: 0.68rem !important; margin-bottom: 12px !important; }
   .ft-col li { margin-bottom: 8px !important; }
   .ft-col a { font-size: 0.8rem !important; }
