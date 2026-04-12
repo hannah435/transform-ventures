@@ -1022,35 +1022,7 @@
 .ft-brand img { height: 80px !important; }
 
 /* Mobile nav fixes */
-@media (max-width: 640px) {
-  .nav-logo img { height: 50px !important; }
-  .nav-inner { height: 60px; }
-  .nav-toggle { display: flex !important; align-items: center; justify-content: center; }
-  .theme-toggle { display: flex !important; }
-  .nav-links {
-    top: 60px !important;
-    padding: 24px 20px !important;
-    gap: 4px !important;
-  }
-  .nav-links > li > a {
-    padding: 16px 20px !important;
-    font-size: 1.1rem !important;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-  .nav-cta {
-    margin-top: 12px;
-    text-align: center;
-    display: block !important;
-    padding: 16px 20px !important;
-  }
-  .ddm {
-    padding: 8px 12px !important;
-  }
-  .ddm a {
-    padding: 12px 14px !important;
-    font-size: 0.9rem !important;
-  }
-}
+/* Single mobile nav breakpoint — no conflicts */
 @media (max-width: 968px) {
   .nav-logo img { height: 60px !important; }
   .nav-toggle { display: flex !important; align-items: center; justify-content: center; }
