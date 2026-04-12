@@ -2220,6 +2220,8 @@ a.ev-card {
   .strat-inner h4 { font-size: 0.88rem !important; }
   .strat-inner p { font-size: 0.72rem !important; display: none; }
   .strat-num-bottom { font-size: 1.5rem !important; margin-top: 10px !important; padding-top: 10px !important; }
+  .strat-card:active { transform: scale(0.96) !important; }
+  .strat-card:active .strat-icon { transform: scale(1.15) !important; }
 
   .nav-logo img {
     height: 60px !important;
