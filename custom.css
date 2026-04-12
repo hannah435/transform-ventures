@@ -133,7 +133,7 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Form inputs */
+/* Form inputs — light mode */
 [data-theme="light"] .fg input,
 [data-theme="light"] .fg select,
 [data-theme="light"] .fg textarea {
@@ -150,6 +150,64 @@
   background: rgba(239, 206, 241, 0.6);
   border-color: rgba(124, 77, 189, 0.3);
   box-shadow: 0 0 0 4px rgba(124, 77, 189, 0.08), 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Form — dark mode glass + neon */
+[data-theme="dark"] .contact-form {
+  background: rgba(124, 77, 189, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(124, 77, 189, 0.35);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow:
+    0 0 20px rgba(124, 77, 189, 0.12),
+    0 0 50px rgba(124, 77, 189, 0.06),
+    0 0 80px rgba(124, 77, 189, 0.03),
+    inset 0 0 40px rgba(124, 77, 189, 0.03);
+}
+[data-theme="dark"] .fg input,
+[data-theme="dark"] .fg select,
+[data-theme="dark"] .fg textarea {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1.5px solid rgba(124, 77, 189, 0.25) !important;
+  color: #fff !important;
+  font-size: 0.95rem;
+  box-shadow: 0 0 12px rgba(124, 77, 189, 0.05);
+}
+[data-theme="dark"] .fg input::placeholder,
+[data-theme="dark"] .fg textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+[data-theme="dark"] .fg select {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+[data-theme="dark"] .fg input:focus,
+[data-theme="dark"] .fg select:focus,
+[data-theme="dark"] .fg textarea:focus {
+  border-color: rgba(124, 77, 189, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(124, 77, 189, 0.12), 0 0 20px rgba(124, 77, 189, 0.15), 0 0 40px rgba(124, 77, 189, 0.05) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Contact section text visibility — dark mode */
+[data-theme="dark"] #contact .section-title { color: #fff; }
+[data-theme="dark"] #contact .section-desc { color: rgba(255, 255, 255, 0.6); }
+[data-theme="dark"] .ci-item h4 { color: #fff !important; }
+[data-theme="dark"] .ci-item p { color: rgba(255, 255, 255, 0.55) !important; }
+[data-theme="dark"] .ci-item {
+  border: 1.5px solid rgba(124, 77, 189, 0.25) !important;
+  box-shadow: 0 0 15px rgba(124, 77, 189, 0.08), 0 0 30px rgba(124, 77, 189, 0.03);
+}
+[data-theme="dark"] .ci-item:hover {
+  border-color: rgba(124, 77, 189, 0.5) !important;
+  box-shadow: 0 0 20px rgba(124, 77, 189, 0.15), 0 0 40px rgba(124, 77, 189, 0.06);
+}
+[data-theme="dark"] .ci-item:hover .ci-icon {
+  box-shadow: 0 0 20px rgba(124, 77, 189, 0.5), 0 0 40px rgba(124, 77, 189, 0.2);
+}
+[data-theme="dark"] #contact .section-label {
+  text-shadow: 0 0 15px rgba(124, 77, 189, 0.4);
 }
 
 /* Strategy cards glass */
@@ -670,6 +728,298 @@
 [data-theme="dark"] .section-title::after {
   box-shadow: 0 0 10px rgba(124, 77, 189, 0.4), 0 0 20px rgba(45, 212, 191, 0.2);
 }
+
+/* Hero — floating gradient orbs */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+}
+.hero-orb-1 {
+  width: 350px;
+  height: 350px;
+  background: rgba(124, 77, 189, 0.18);
+  top: 10%;
+  right: 5%;
+  animation: orb-float-1 18s ease-in-out infinite;
+}
+.hero-orb-2 {
+  width: 280px;
+  height: 280px;
+  background: rgba(45, 212, 191, 0.12);
+  bottom: 15%;
+  left: 5%;
+  animation: orb-float-2 22s ease-in-out infinite;
+}
+.hero-orb-3 {
+  width: 200px;
+  height: 200px;
+  background: rgba(184, 141, 230, 0.1);
+  top: 50%;
+  left: 30%;
+  animation: orb-float-3 15s ease-in-out infinite;
+}
+@keyframes orb-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-30px, 20px) scale(1.05); }
+  66% { transform: translate(15px, -15px) scale(0.95); }
+}
+@keyframes orb-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(25px, -20px) scale(1.08); }
+  66% { transform: translate(-10px, 15px) scale(0.96); }
+}
+@keyframes orb-float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.08; }
+  50% { transform: translate(20px, -25px) scale(1.1); opacity: 0.15; }
+}
+/* Scratch lines */
+.hero-scratches {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.scratch {
+  position: absolute;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(124, 77, 189, 0.4), transparent);
+  transform-origin: center;
+}
+/* Right side scratches */
+.s1 { width: 450px; top: 15%; right: -2%; transform: rotate(-25deg); }
+.s2 { width: 350px; top: 28%; right: 2%;  transform: rotate(-20deg); opacity: 0.8; }
+.s3 { width: 500px; top: 45%; right: -5%; transform: rotate(-30deg); background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.35), transparent); }
+.s4 { width: 300px; top: 62%; right: 4%;  transform: rotate(-22deg); opacity: 0.7; }
+/* Left side scratches */
+.s5 { width: 400px; top: 22%; left: -3%;  transform: rotate(-28deg); opacity: 0.8; background: linear-gradient(90deg, transparent, rgba(184, 141, 230, 0.35), transparent); }
+.s6 { width: 320px; top: 40%; left: 1%;   transform: rotate(-18deg); opacity: 0.7; }
+.s7 { width: 450px; top: 58%; left: -4%;  transform: rotate(-32deg); opacity: 0.6; background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.3), transparent); }
+.s8 { width: 280px; top: 72%; left: 4%;   transform: rotate(-24deg); opacity: 0.6; }
+
+/* ===== AMBIENT GLOWS ON ALL SECTIONS (dark mode) ===== */
+[data-theme="dark"] .section,
+[data-theme="dark"] .cta-banner {
+  overflow: hidden;
+}
+
+/* Right side glow */
+[data-theme="dark"] #divisions,
+[data-theme="dark"] #about,
+[data-theme="dark"] #events,
+[data-theme="dark"] #capital,
+[data-theme="dark"] #strategies,
+[data-theme="dark"] #fund,
+[data-theme="dark"] #leadership,
+[data-theme="dark"] #contact,
+[data-theme="dark"] .cta-banner {
+  background-image:
+    radial-gradient(ellipse 300px 300px at 90% 20%, rgba(124,77,189,0.08), transparent),
+    radial-gradient(ellipse 250px 250px at 10% 80%, rgba(45,212,191,0.06), transparent);
+}
+
+/* Alternate glow positions per section */
+[data-theme="dark"] #about,
+[data-theme="dark"] #capital,
+[data-theme="dark"] #leadership {
+  background-image:
+    radial-gradient(ellipse 280px 280px at 85% 70%, rgba(45,212,191,0.07), transparent),
+    radial-gradient(ellipse 300px 300px at 8% 25%, rgba(124,77,189,0.08), transparent);
+}
+
+/* Fund section — gold glows */
+[data-theme="dark"] #fund {
+  background-image:
+    radial-gradient(ellipse 300px 300px at 85% 30%, rgba(247,167,47,0.06), transparent),
+    radial-gradient(ellipse 250px 250px at 10% 70%, rgba(247,167,47,0.04), transparent);
+}
+
+/* ===== SCRATCH LINES ON SECTIONS ===== */
+
+/* Divisions section */
+#divisions::before, #divisions::after,
+#about::before, #about::after,
+#events::before, #events::after,
+#capital::before, #capital::after,
+#strategies::before, #strategies::after,
+#fund::before, #fund::after,
+#leadership::before, #leadership::after,
+#contact::before, #contact::after,
+.cta-banner::before, .cta-banner::after {
+  content: '';
+  position: absolute;
+  height: 1.5px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Right scratches */
+#divisions::before { width: 350px; top: 15%; right: -2%; transform: rotate(-22deg); background: linear-gradient(90deg, transparent, rgba(124,77,189,0.2), transparent); }
+#about::before { width: 400px; top: 20%; right: -3%; transform: rotate(-28deg); background: linear-gradient(90deg, transparent, rgba(45,212,191,0.15), transparent); }
+#events::before { width: 300px; top: 12%; right: 0; transform: rotate(-18deg); background: linear-gradient(90deg, transparent, rgba(184,141,230,0.18), transparent); }
+#capital::before { width: 380px; top: 18%; right: -2%; transform: rotate(-25deg); background: linear-gradient(90deg, transparent, rgba(124,77,189,0.15), transparent); }
+#strategies::before { width: 320px; top: 10%; right: 0; transform: rotate(-20deg); background: linear-gradient(90deg, transparent, rgba(45,212,191,0.15), transparent); }
+#fund::before { width: 350px; top: 15%; right: -1%; transform: rotate(-24deg); background: linear-gradient(90deg, transparent, rgba(247,167,47,0.15), transparent); }
+#leadership::before { width: 300px; top: 20%; right: 2%; transform: rotate(-22deg); background: linear-gradient(90deg, transparent, rgba(124,77,189,0.15), transparent); }
+#contact::before { width: 380px; top: 12%; right: -2%; transform: rotate(-26deg); background: linear-gradient(90deg, transparent, rgba(184,141,230,0.15), transparent); }
+.cta-banner::before { width: 300px; top: 20%; right: 0; transform: rotate(-20deg); background: linear-gradient(90deg, transparent, rgba(45,212,191,0.12), transparent); }
+
+/* Left scratches */
+#divisions::after { width: 300px; bottom: 20%; left: -2%; transform: rotate(-26deg); background: linear-gradient(90deg, transparent, rgba(45,212,191,0.15), transparent); }
+#about::after { width: 350px; bottom: 15%; left: -1%; transform: rotate(-20deg); background: linear-gradient(90deg, transparent, rgba(124,77,189,0.15), transparent); }
+#events::after { width: 280px; bottom: 18%; left: 0; transform: rotate(-30deg); background: linear-gradient(90deg, transparent, rgba(124,77,189,0.12), transparent); }
+#capital::after { width: 320px; bottom: 20%; left: -3%; transform: rotate(-22deg); background: linear-gradient(90deg, transparent, rgba(45,212,191,0.12), transparent); }
+#strategies::after { width: 350px; bottom: 15%; left: -1%; transform: rotate(-28deg); background: linear-gradient(90deg, transparent, rgba(124,77,189,0.12), transparent); }
+#fund::after { width: 300px; bottom: 18%; left: 0; transform: rotate(-20deg); background: linear-gradient(90deg, transparent, rgba(247,167,47,0.12), transparent); }
+#leadership::after { width: 280px; bottom: 22%; left: 2%; transform: rotate(-25deg); background: linear-gradient(90deg, transparent, rgba(45,212,191,0.12), transparent); }
+#contact::after { width: 320px; bottom: 15%; left: -2%; transform: rotate(-22deg); background: linear-gradient(90deg, transparent, rgba(124,77,189,0.12), transparent); }
+.cta-banner::after { width: 280px; bottom: 25%; left: 0; transform: rotate(-24deg); background: linear-gradient(90deg, transparent, rgba(124,77,189,0.1), transparent); }
+
+@media (max-width: 640px) {
+  .hero-orb-1 { width: 200px; height: 200px; }
+  .hero-orb-2 { width: 180px; height: 180px; }
+  .hero-orb-3, .hero-scratches { display: none; }
+  #divisions::before, #divisions::after,
+  #about::before, #about::after,
+  #events::before, #events::after,
+  #capital::before, #capital::after,
+  #strategies::before, #strategies::after,
+  #fund::before, #fund::after,
+  #leadership::before, #leadership::after,
+  #contact::before, #contact::after,
+  .cta-banner::before, .cta-banner::after { display: none; }
+}
+
+/* ===== PARTNERS BAR — Glowing ===== */
+.partners-bar {
+  padding: 70px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #08051a 0%, #120840 50%, #08051a 100%);
+  border-top: 2px solid rgba(124, 77, 189, 0.25);
+  border-bottom: 2px solid rgba(124, 77, 189, 0.25);
+  box-shadow: inset 0 0 60px rgba(124, 77, 189, 0.05);
+}
+.partners-glow-left {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(124, 77, 189, 0.35), transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  animation: orb-float-1 12s ease-in-out infinite;
+}
+.partners-glow-right {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(45, 212, 191, 0.3), transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  animation: orb-float-2 15s ease-in-out infinite;
+}
+.partners-label {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 32px;
+  font-weight: 600;
+  text-shadow: 0 0 15px rgba(124, 77, 189, 0.3);
+}
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.partner-logo {
+  height: 40px;
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(124, 77, 189, 0.2));
+  transition: all 0.4s ease;
+}
+.partner-logo:hover {
+  filter: drop-shadow(0 0 20px rgba(124, 77, 189, 0.5)) drop-shadow(0 0 40px rgba(124, 77, 189, 0.2));
+  transform: translateY(-4px) scale(1.08);
+}
+.partner-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0.7;
+  transition: all 0.4s ease;
+  cursor: default;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+.partner-text:hover {
+  opacity: 1;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(124, 77, 189, 0.3);
+  transform: translateY(-4px);
+}
+
+/* ===== FOOTER — Brighter ===== */
+[data-theme="dark"] footer {
+  background: linear-gradient(180deg, #0a0620, #0e0830) !important;
+  border-top: 1px solid rgba(124, 77, 189, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+[data-theme="dark"] footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 250px;
+  height: 150px;
+  background: radial-gradient(ellipse, rgba(124, 77, 189, 0.08), transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+[data-theme="dark"] footer::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  width: 200px;
+  height: 150px;
+  background: radial-gradient(ellipse, rgba(45, 212, 191, 0.06), transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+[data-theme="dark"] .ft-brand p { color: rgba(255, 255, 255, 0.45) !important; }
+[data-theme="dark"] .ft-col h4 { color: rgba(255, 255, 255, 0.6) !important; }
+[data-theme="dark"] .ft-col a { color: rgba(255, 255, 255, 0.4) !important; }
+[data-theme="dark"] .ft-col a:hover { color: #b88de6 !important; text-shadow: 0 0 10px rgba(124, 77, 189, 0.3); }
+[data-theme="dark"] .ft-bottom p { color: rgba(255, 255, 255, 0.25) !important; }
+[data-theme="dark"] .ft-social a {
+  background: rgba(124, 77, 189, 0.08) !important;
+  border-color: rgba(124, 77, 189, 0.15) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+[data-theme="dark"] .ft-social a:hover {
+  background: rgba(124, 77, 189, 0.2) !important;
+  border-color: rgba(124, 77, 189, 0.4) !important;
+  color: #b88de6 !important;
+  box-shadow: 0 0 15px rgba(124, 77, 189, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Logos bigger */
+.nav-logo img { height: 100px !important; }
+.ft-brand img { height: 80px !important; }
 
 /* Hero accent — neon text glow */
 [data-theme="dark"] .hero h1 .accent {
