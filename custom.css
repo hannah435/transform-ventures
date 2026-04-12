@@ -1056,19 +1056,17 @@
   .nav-toggle { display: flex !important; align-items: center; justify-content: center; }
   .theme-toggle { display: flex !important; }
   .nav-links {
-    display: none;
+    display: none !important;
     flex-direction: column;
     position: fixed;
-    top: 72px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--mobile-nav-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: 24px;
+    background: #08051a !important;
+    padding: 100px 32px 40px !important;
     overflow-y: auto;
-    z-index: 99;
+    z-index: 98;
   }
   .nav-links.active { display: flex !important; }
 }
