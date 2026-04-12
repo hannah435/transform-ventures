@@ -2204,15 +2204,22 @@ a.ev-card {
   }
 
   .strat-grid {
-    grid-template-columns: 1fr !important;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 16px !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
   }
   .strat-inner {
     min-height: auto !important;
+    padding: 20px 16px !important;
   }
+  .strat-icon {
+    width: 40px !important;
+    height: 40px !important;
+    margin-bottom: 12px !important;
+    font-size: 1rem !important;
+  }
+  .strat-inner h4 { font-size: 0.88rem !important; }
+  .strat-inner p { font-size: 0.72rem !important; display: none; }
+  .strat-num-bottom { font-size: 1.5rem !important; margin-top: 10px !important; padding-top: 10px !important; }
 
   .nav-logo img {
     height: 60px !important;
