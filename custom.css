@@ -1039,6 +1039,56 @@
 }
 .mobile-menu.open { display: block; }
 
+/* Close button */
+.mm-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background: rgba(124, 77, 189, 0.1);
+  border: 1px solid rgba(124, 77, 189, 0.25);
+  border-radius: 12px;
+  color: rgba(255,255,255,0.7);
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.mm-close:active {
+  background: rgba(124, 77, 189, 0.2);
+  border-color: rgba(124, 77, 189, 0.5);
+  box-shadow: 0 0 15px rgba(124, 77, 189, 0.2);
+  color: #fff;
+}
+
+/* Ambient glows inside mobile menu */
+.mm-glow-1 {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(124, 77, 189, 0.2), transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  animation: orb-float-1 12s ease-in-out infinite;
+}
+.mm-glow-2 {
+  position: absolute;
+  bottom: 10%;
+  right: -10%;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.15), transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  animation: orb-float-2 15s ease-in-out infinite;
+}
+
 .mobile-menu-inner {
   display: flex;
   flex-direction: column;
@@ -1070,6 +1120,35 @@
   border-color: rgba(124, 77, 189, 0.4);
   box-shadow: 0 0 15px rgba(124, 77, 189, 0.15);
   color: #fff;
+  transform: scale(0.97);
+}
+
+/* Neon glow border on links */
+.mm-link {
+  position: relative;
+  overflow: hidden;
+}
+.mm-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(124, 77, 189, 0.08), transparent);
+  transition: left 0.4s ease;
+}
+.mm-link:active::before {
+  left: 100%;
+}
+
+/* Divisions chevron rotation */
+.mm-divisions svg {
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+}
+.mm-divisions.open svg {
+  transform: rotate(180deg);
 }
 
 .mm-cta {
