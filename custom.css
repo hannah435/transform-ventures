@@ -291,24 +291,29 @@
 
 /* ===== BUTTONS — Glass + Neon ===== */
 
-/* Primary button — glass with neon glow */
+/* ===== BUTTONS — Glass + Bright Neon Glow ===== */
+
+/* Primary button — teal glass, white text, bright glow */
 .btn-p {
-  background: rgba(45, 212, 191, 0.12) !important;
+  background: rgba(45, 212, 191, 0.15) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(45, 212, 191, 0.5) !important;
-  color: #2dd4bf !important;
-  box-shadow: 0 0 15px rgba(45, 212, 191, 0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+  border: 2px solid rgba(45, 212, 191, 0.8) !important;
+  color: #5eecd5 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 10px rgba(45, 212, 191, 0.5);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.25), 0 0 50px rgba(45, 212, 191, 0.08);
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 .btn-p:hover {
-  background: rgba(45, 212, 191, 0.2) !important;
-  border-color: rgba(45, 212, 191, 0.7) !important;
-  box-shadow: 0 0 25px rgba(45, 212, 191, 0.25), 0 0 60px rgba(45, 212, 191, 0.08);
+  background: rgba(45, 212, 191, 0.25) !important;
+  border-color: rgba(45, 212, 191, 1) !important;
   color: #fff !important;
-  transform: translateY(-2px);
+  text-shadow: 0 0 15px rgba(45, 212, 191, 0.7);
+  box-shadow: 0 0 30px rgba(45, 212, 191, 0.4), 0 0 70px rgba(45, 212, 191, 0.12);
+  transform: translateY(-3px);
 }
 .btn-p::after {
   content: '';
@@ -317,47 +322,53 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.15), transparent);
+  background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.2), transparent);
   transition: left 0.5s;
 }
 .btn-p:hover::after { left: 100%; }
 
-/* Secondary button — glass with purple neon */
+/* Secondary button — purple glass, bright text */
 .btn-s {
-  background: rgba(124, 77, 189, 0.08) !important;
+  background: rgba(124, 77, 189, 0.1) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(124, 77, 189, 0.3) !important;
-  color: rgba(255,255,255,0.7) !important;
-  box-shadow: 0 0 10px rgba(124, 77, 189, 0.08);
+  border: 2px solid rgba(124, 77, 189, 0.6) !important;
+  color: #b88de6 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 8px rgba(124, 77, 189, 0.4);
+  box-shadow: 0 0 15px rgba(124, 77, 189, 0.15);
   transition: all 0.3s ease;
 }
 .btn-s:hover {
-  background: rgba(124, 77, 189, 0.15) !important;
-  border-color: rgba(124, 77, 189, 0.5) !important;
-  box-shadow: 0 0 20px rgba(124, 77, 189, 0.15), 0 0 50px rgba(124, 77, 189, 0.06);
+  background: rgba(124, 77, 189, 0.2) !important;
+  border-color: rgba(124, 77, 189, 0.85) !important;
   color: #fff !important;
+  text-shadow: 0 0 12px rgba(124, 77, 189, 0.6);
+  box-shadow: 0 0 25px rgba(124, 77, 189, 0.3), 0 0 60px rgba(124, 77, 189, 0.08);
   transform: translateY(-2px);
 }
 
-/* Fund button — glass with gold neon */
+/* Fund button — gold glass */
 .btn-fund {
   background: rgba(247, 167, 47, 0.12) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(247, 167, 47, 0.5) !important;
-  color: #f7a72f !important;
-  box-shadow: 0 0 15px rgba(247, 167, 47, 0.15);
+  border: 2px solid rgba(247, 167, 47, 0.7) !important;
+  color: #fbbf24 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 10px rgba(247, 167, 47, 0.5);
+  box-shadow: 0 0 20px rgba(247, 167, 47, 0.2), 0 0 50px rgba(247, 167, 47, 0.06);
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 .btn-fund:hover {
-  background: rgba(247, 167, 47, 0.2) !important;
-  border-color: rgba(247, 167, 47, 0.7) !important;
-  box-shadow: 0 0 25px rgba(247, 167, 47, 0.25), 0 0 60px rgba(247, 167, 47, 0.08);
+  background: rgba(247, 167, 47, 0.22) !important;
+  border-color: rgba(247, 167, 47, 1) !important;
   color: #fff !important;
-  transform: translateY(-2px);
+  text-shadow: 0 0 15px rgba(247, 167, 47, 0.7);
+  box-shadow: 0 0 30px rgba(247, 167, 47, 0.35), 0 0 70px rgba(247, 167, 47, 0.1);
+  transform: translateY(-3px);
 }
 .btn-fund::after {
   content: '';
@@ -371,21 +382,27 @@
 }
 .btn-fund:hover::after { left: 100%; }
 
-/* Nav CTA — glass neon */
+/* Nav CTA — teal glass, bright */
 .nav-cta {
-  background: rgba(45, 212, 191, 0.1) !important;
-  border: 1.5px solid rgba(45, 212, 191, 0.4) !important;
-  color: #2dd4bf !important;
-  box-shadow: 0 0 12px rgba(45, 212, 191, 0.12);
+  background: rgba(45, 212, 191, 0.15) !important;
+  border: 2px solid rgba(45, 212, 191, 0.7) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 10px rgba(45, 212, 191, 0.5);
+  box-shadow: 0 0 15px rgba(45, 212, 191, 0.2);
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
 }
-.nav-cta:hover {
-  background: rgba(45, 212, 191, 0.18) !important;
-  border-color: rgba(45, 212, 191, 0.6) !important;
-  box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
+.mm-cta {
   color: #fff !important;
+}
+.nav-cta:hover {
+  background: rgba(45, 212, 191, 0.25) !important;
+  border-color: rgba(45, 212, 191, 1) !important;
+  color: #fff !important;
+  text-shadow: 0 0 15px rgba(45, 212, 191, 0.7);
+  box-shadow: 0 0 25px rgba(45, 212, 191, 0.35), 0 0 60px rgba(45, 212, 191, 0.08);
 }
 .nav-cta::after {
   content: '';
@@ -394,10 +411,237 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.12), transparent);
+  background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.15), transparent);
   transition: left 0.4s;
 }
 .nav-cta:hover::after { left: 100%; }
+
+/* Event banners — real photos */
+.ev-banner {
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative;
+  height: 220px !important;
+}
+.ev-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.ev-banner.tokenize { background-position: top center !important; }
+.ev-banner.tokenize::before { background: linear-gradient(180deg, rgba(45, 15, 100, 0.15), rgba(30, 10, 70, 0.35)); }
+.ev-banner.bitangels::before { background: linear-gradient(180deg, rgba(10, 15, 35, 0.3), rgba(10, 15, 35, 0.6)); }
+.ev-banner.tigermansion::before { background: linear-gradient(180deg, rgba(15, 10, 5, 0.3), rgba(15, 10, 5, 0.6)); }
+.ev-logo, .ev-banner-text { position: relative; z-index: 1; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5)); }
+
+/* Clickable cards */
+a.ev-card { text-decoration: none; color: inherit; display: block; cursor: pointer; }
+
+/* Visit website link */
+.ev-visit {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2dd4bf;
+  transition: all 0.3s ease;
+}
+.ev-card:hover .ev-visit {
+  color: #5eecd5;
+  text-shadow: 0 0 10px rgba(45, 212, 191, 0.4);
+  letter-spacing: 0.5px;
+}
+
+/* Fund section — two column: book left, details right */
+.fund-layout {
+  display: flex !important;
+  align-items: center;
+  gap: 48px;
+  text-align: left !important;
+  padding: 48px !important;
+}
+.fund-book-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.fund-book-img {
+  width: 260px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 16px 50px rgba(0,0,0,0.5), 0 0 30px rgba(247, 167, 47, 0.12);
+  transition: all 0.3s ease;
+}
+.fund-layout:hover .fund-book-img {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(247, 167, 47, 0.2);
+  transform: translateY(-4px);
+}
+.fund-details-side {
+  flex: 1;
+}
+.fund-details-side .section-desc {
+  margin-bottom: 24px;
+}
+.fund-details-side .fund-highlights {
+  justify-content: flex-start;
+  margin: 24px 0;
+}
+.fund-book-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #f7a72f;
+  background: rgba(247, 167, 47, 0.1);
+  border: 1px solid rgba(247, 167, 47, 0.3);
+  padding: 4px 14px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.fund-book-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #f7a72f !important;
+  background: rgba(247, 167, 47, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(247, 167, 47, 0.6);
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(247, 167, 47, 0.15);
+  transition: all 0.3s ease;
+}
+.fund-book-btn:hover {
+  background: rgba(247, 167, 47, 0.2);
+  border-color: rgba(247, 167, 47, 0.9);
+  color: #fff !important;
+  text-shadow: 0 0 10px rgba(247, 167, 47, 0.5);
+  box-shadow: 0 0 25px rgba(247, 167, 47, 0.3), 0 0 60px rgba(247, 167, 47, 0.08);
+  transform: translateY(-2px);
+}
+/* Fund section — ambient glows + scratches */
+[data-theme="dark"] #fund {
+  position: relative;
+  overflow: hidden;
+}
+[data-theme="dark"] #fund .fund-glow {
+  display: block;
+}
+.fund-glow-left {
+  position: absolute;
+  top: 20%;
+  left: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(247, 167, 47, 0.12), transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  animation: orb-float-1 14s ease-in-out infinite;
+}
+.fund-glow-right {
+  position: absolute;
+  bottom: 15%;
+  right: -3%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(247, 167, 47, 0.08), transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  animation: orb-float-2 18s ease-in-out infinite;
+}
+.fund-scratch-1 {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  width: 250px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(247, 167, 47, 0.2), transparent);
+  transform: rotate(-20deg);
+  pointer-events: none;
+}
+.fund-scratch-2 {
+  position: absolute;
+  bottom: 20%;
+  left: 3%;
+  width: 200px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(247, 167, 47, 0.15), transparent);
+  transform: rotate(-25deg);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .fund-layout {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 32px 24px !important;
+  }
+  .fund-book-img { width: 200px; }
+  .fund-details-side .fund-highlights { justify-content: center; }
+}
+.fund-book-badge {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #f7a72f;
+  background: rgba(247, 167, 47, 0.1);
+  border: 1px solid rgba(247, 167, 47, 0.25);
+  padding: 3px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
+
+/* Leadership section — ambient elements */
+.leader-glow-1 {
+  position: absolute;
+  top: 10%;
+  right: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(124, 77, 189, 0.15), transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  animation: orb-float-1 16s ease-in-out infinite;
+}
+.leader-glow-2 {
+  position: absolute;
+  bottom: 15%;
+  left: -3%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.1), transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  animation: orb-float-2 20s ease-in-out infinite;
+}
+.leader-scratch-1 {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 250px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(124, 77, 189, 0.2), transparent);
+  transform: rotate(-22deg);
+  pointer-events: none;
+}
+.leader-scratch-2 {
+  position: absolute;
+  bottom: 25%;
+  right: 3%;
+  width: 200px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.15), transparent);
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
 
 /* Section titles — subtle hover underline */
 .section-title {
@@ -701,19 +945,62 @@
   text-shadow: 0 0 15px rgba(124, 77, 189, 0.3);
 }
 
-/* Leader card — subtle neon outline on hover */
-[data-theme="dark"] .leader-card:hover {
-  border-color: rgba(124, 77, 189, 0.2);
+/* Leader card — always glowing */
+[data-theme="dark"] .leader-card {
+  border: 2px solid rgba(124, 77, 189, 0.35) !important;
   box-shadow:
-    0 0 25px rgba(124, 77, 189, 0.08),
+    0 0 20px rgba(124, 77, 189, 0.12),
+    0 0 50px rgba(124, 77, 189, 0.05);
+}
+[data-theme="dark"] .leader-card:hover {
+  border-color: rgba(124, 77, 189, 0.6) !important;
+  box-shadow:
+    0 0 30px rgba(124, 77, 189, 0.2),
+    0 0 60px rgba(124, 77, 189, 0.08),
     0 20px 50px rgba(0, 0, 0, 0.2);
 }
+/* Leader photo — neon glow frame */
+[data-theme="dark"] .leader-photo {
+  border: 2px solid rgba(124, 77, 189, 0.3);
+  box-shadow: 0 0 20px rgba(124, 77, 189, 0.15), 0 8px 30px rgba(0,0,0,0.3);
+}
+[data-theme="dark"] .leader-card:hover .leader-photo {
+  border-color: rgba(124, 77, 189, 0.5);
+  box-shadow: 0 0 30px rgba(124, 77, 189, 0.25), 0 8px 30px rgba(0,0,0,0.3);
+}
+/* Brighter text */
+[data-theme="dark"] .leader-info h3 { text-shadow: 0 0 15px rgba(255,255,255,0.1); }
+[data-theme="dark"] .leader-info .role { color: #b88de6 !important; text-shadow: 0 0 10px rgba(124,77,189,0.3); }
+[data-theme="dark"] .leader-info p { color: rgba(255,255,255,0.65) !important; }
 
-/* Leader tags — neon on hover */
+/* Leader tags — always neon */
+[data-theme="dark"] .ltag {
+  border-color: rgba(124, 77, 189, 0.25) !important;
+  color: #b88de6 !important;
+  box-shadow: 0 0 8px rgba(124, 77, 189, 0.08);
+}
 [data-theme="dark"] .ltag:hover {
-  box-shadow: 0 0 12px rgba(124, 77, 189, 0.2);
-  border-color: rgba(124, 77, 189, 0.3);
-  color: #b88de6;
+  box-shadow: 0 0 15px rgba(124, 77, 189, 0.25);
+  border-color: rgba(124, 77, 189, 0.5) !important;
+  color: #d4a5ff !important;
+  transform: translateY(-2px);
+}
+
+/* Achievement cards — brighter, glowing */
+[data-theme="dark"] .la-item {
+  border: 1.5px solid rgba(124, 77, 189, 0.2) !important;
+  box-shadow: 0 0 15px rgba(124, 77, 189, 0.06);
+}
+[data-theme="dark"] .la-item:hover {
+  border-color: rgba(124, 77, 189, 0.45) !important;
+  box-shadow: 0 0 20px rgba(124, 77, 189, 0.15), 0 0 50px rgba(124, 77, 189, 0.05);
+}
+[data-theme="dark"] .la-item .la-val {
+  color: #2dd4bf !important;
+  text-shadow: 0 0 15px rgba(45, 212, 191, 0.4);
+}
+[data-theme="dark"] .la-item .la-lbl {
+  color: rgba(255,255,255,0.5) !important;
 }
 
 /* Fund section — golden neon INTENSE */
@@ -791,28 +1078,36 @@
   filter: blur(80px);
 }
 .hero-orb-1 {
-  width: 350px;
-  height: 350px;
-  background: rgba(124, 77, 189, 0.18);
+  width: 400px;
+  height: 400px;
+  background: rgba(124, 77, 189, 0.3);
   top: 10%;
   right: 5%;
   animation: orb-float-1 18s ease-in-out infinite;
 }
 .hero-orb-2 {
-  width: 280px;
-  height: 280px;
-  background: rgba(45, 212, 191, 0.12);
+  width: 350px;
+  height: 350px;
+  background: rgba(45, 212, 191, 0.2);
   bottom: 15%;
   left: 5%;
   animation: orb-float-2 22s ease-in-out infinite;
 }
 .hero-orb-3 {
-  width: 200px;
-  height: 200px;
-  background: rgba(184, 141, 230, 0.1);
+  width: 250px;
+  height: 250px;
+  background: rgba(184, 141, 230, 0.18);
   top: 50%;
   left: 30%;
   animation: orb-float-3 15s ease-in-out infinite;
+}
+.hero-orb-4 {
+  width: 300px;
+  height: 300px;
+  background: rgba(124, 77, 189, 0.22);
+  top: 20%;
+  left: -3%;
+  animation: orb-float-2 20s ease-in-out infinite 3s;
 }
 @keyframes orb-float-1 {
   0%, 100% { transform: translate(0, 0) scale(1); }
