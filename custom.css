@@ -2223,6 +2223,15 @@ a.ev-card {
   .strat-card:active { transform: scale(0.96) !important; }
   .strat-card:active .strat-icon { transform: scale(1.15) !important; }
 
+  /* Footer — 2 columns, compact */
+  .ft-top { grid-template-columns: 1fr 1fr !important; gap: 20px 24px !important; margin-bottom: 32px !important; }
+  .ft-brand { grid-column: 1 / -1; }
+  .ft-brand p { display: none; }
+  .ft-brand img { height: 50px !important; margin-bottom: 8px !important; }
+  .ft-col h4 { font-size: 0.68rem !important; margin-bottom: 12px !important; }
+  .ft-col li { margin-bottom: 8px !important; }
+  .ft-col a { font-size: 0.8rem !important; }
+
   .nav-logo img {
     height: 60px !important;
   }

@@ -437,7 +437,7 @@ footer{border-top:1px solid var(--footer-border);padding:72px 0 28px;background:
   .section{padding:72px 0}
   .div-grid,.div-row2{grid-template-columns:1fr}
   .strat-grid{grid-template-columns:1fr 1fr}
-  .ft-top{grid-template-columns:1fr;gap:28px}
+  .ft-top{grid-template-columns:1fr 1fr;gap:20px 24px}
   .ft-bottom{flex-direction:column;gap:12px;text-align:center}
   .leader-photo{width:140px;height:170px;min-width:140px}
   .leader-achievements{grid-template-columns:1fr 1fr 1fr}
