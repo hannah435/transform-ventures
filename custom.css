@@ -51,6 +51,31 @@
   box-shadow: 0 0 20px rgba(124, 77, 189, 0.25), 0 0 50px rgba(124, 77, 189, 0.1);
 }
 
+/* ===== NAV DROPDOWN — lit-up hover ===== */
+.ddm a {
+  transition: all 0.25s ease;
+}
+
+.ddm a:hover {
+  background: rgba(124, 77, 189, 0.2) !important;
+  box-shadow: inset 0 0 20px rgba(124, 77, 189, 0.15), 0 0 15px rgba(124, 77, 189, 0.1);
+}
+
+.ddm a:hover .dd-icon {
+  background: rgba(124, 77, 189, 0.25);
+  color: #c9a0ff;
+  box-shadow: 0 0 14px rgba(124, 77, 189, 0.4);
+}
+
+.ddm a:hover .dd-text span {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(180, 140, 255, 0.5);
+}
+
+.ddm a:hover .dd-text small {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* ===== GLASSMORPHISM — Enhanced for all cards ===== */
 
 /* Division cards */
