@@ -793,72 +793,89 @@ a.ev-card {
 }
 
 @media (max-width: 968px) {
-  .fund-layout {
+  .fund-content.fund-layout {
     flex-direction: column !important;
     text-align: center !important;
-    padding: 28px 20px !important;
-    gap: 20px !important;
+    padding: 24px 18px !important;
+    gap: 18px !important;
   }
 
   .fund-book-side {
     position: static;
-    gap: 10px;
+    gap: 8px;
   }
 
   .fund-book-img {
-    width: 170px;
+    width: 160px !important;
   }
 
   .fund-details-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .fund-details-side .section-label {
+    margin-bottom: 4px !important;
+    font-size: 0.7rem !important;
+  }
+
+  .fund-details-side .section-title {
+    font-size: 1.3rem !important;
+    margin-bottom: 8px !important;
   }
 
   .fund-details-side .section-desc {
-    margin-bottom: 12px;
-    font-size: 0.85rem;
-    max-width: 320px;
+    margin-bottom: 10px !important;
+    font-size: 0.82rem !important;
+    max-width: 300px;
+    line-height: 1.5;
   }
 
-  .fund-details-side .fund-highlights {
-    justify-content: center;
-    gap: 24px;
-    margin: 14px 0;
+  .fund-highlights {
+    gap: 20px !important;
+    margin: 10px 0 !important;
+    justify-content: center !important;
+  }
+
+  .fund-hl {
+    padding: 0 8px !important;
   }
 
   .fund-hl .val {
-    font-size: 1.3rem;
+    font-size: 1.2rem !important;
   }
 
   .fund-hl .desc {
-    font-size: 0.65rem;
+    font-size: 0.62rem !important;
   }
 
   .fund-features {
-    text-align: left;
-    margin: 0 0 14px;
+    text-align: left !important;
+    margin: 0 0 10px !important;
   }
 
   .fund-features li {
-    font-size: 0.78rem;
-    margin-bottom: 4px;
+    font-size: 0.75rem !important;
+    margin-bottom: 3px !important;
+    line-height: 1.4 !important;
   }
 
   .fund-citation {
-    font-size: 0.75rem;
-    margin-bottom: 14px;
-    max-width: 300px;
+    font-size: 0.72rem !important;
+    margin-bottom: 12px !important;
+    max-width: 280px;
   }
 
   .fund-actions {
-    justify-content: center;
+    justify-content: center !important;
+    gap: 10px !important;
   }
 
   .btn-fund,
   .fund-book-btn {
-    padding: 10px 22px !important;
-    font-size: 0.82rem !important;
+    padding: 9px 20px !important;
+    font-size: 0.8rem !important;
     border-radius: 50px !important;
   }
 }
