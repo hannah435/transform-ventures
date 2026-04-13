@@ -2338,8 +2338,11 @@
         <a href="#fund" class="mm-sub">Bitcoin Supercycle Fund</a>
       </div>
       <a href="#events" class="mm-link">Events</a>
-      <a href="news.html" class="mm-link">News & Press</a>
-      <a href="blog.html" class="mm-link">Blog</a>
+      <a href="#" class="mm-link mm-media" id="mmMedia">Media <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="mm-dropdown" id="mmMediaDrop">
+        <a href="news.html" class="mm-sub">News & Press</a>
+        <a href="blog.html" class="mm-sub">Blog</a>
+      </div>
       <a href="#leadership" class="mm-link">Leadership</a>
       <a href="#contact" class="mm-cta">Contact</a>
     </nav>
@@ -2969,7 +2972,9 @@
 
     const mmClose = document.getElementById('mmClose');
     function openMM() { nt.classList.add('active'); mm.classList.add('open'); document.body.style.overflow = 'hidden'; }
-    function closeMM() { nt.classList.remove('active'); mm.classList.remove('open'); mmDrop.classList.remove('open'); document.body.style.overflow = ''; }
+    const mmMedia = document.getElementById('mmMedia');
+    const mmMediaDrop = document.getElementById('mmMediaDrop');
+    function closeMM() { nt.classList.remove('active'); mm.classList.remove('open'); mmDrop.classList.remove('open'); if(mmMediaDrop) mmMediaDrop.classList.remove('open'); document.body.style.overflow = ''; }
     nt.addEventListener('click', () => { mm.classList.contains('open') ? closeMM() : openMM(); });
     mmClose.addEventListener('click', closeMM);
 
@@ -2980,8 +2985,17 @@
       this.classList.toggle('open');
     });
 
+    // Media toggle
+    if(mmMedia) {
+      mmMedia.addEventListener('click', function(e) {
+        e.preventDefault();
+        mmMediaDrop.classList.toggle('open');
+        this.classList.toggle('open');
+      });
+    }
+
     // Close menu + scroll on link click
-    document.querySelectorAll('.mobile-menu a:not(.mm-divisions)').forEach(a => {
+    document.querySelectorAll('.mobile-menu a:not(.mm-divisions):not(.mm-media)').forEach(a => {
       a.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         closeMM();
