@@ -796,8 +796,8 @@ a.ev-card {
   .fund-layout {
     flex-direction: column !important;
     text-align: center !important;
-    padding: 32px 24px !important;
-    gap: 24px !important;
+    padding: 28px 20px !important;
+    gap: 20px !important;
   }
 
   .fund-book-side {
@@ -806,42 +806,49 @@ a.ev-card {
   }
 
   .fund-book-img {
-    width: 180px;
+    width: 170px;
+  }
+
+  .fund-details-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .fund-details-side .section-desc {
-    margin-bottom: 14px;
-    font-size: 0.88rem;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    max-width: 320px;
   }
 
   .fund-details-side .fund-highlights {
     justify-content: center;
-    gap: 28px;
-    margin: 16px 0;
+    gap: 24px;
+    margin: 14px 0;
   }
 
   .fund-hl .val {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .fund-hl .desc {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
   }
 
   .fund-features {
     text-align: left;
-    display: inline-block;
-    margin: 0 auto 18px;
+    margin: 0 0 14px;
   }
 
   .fund-features li {
-    font-size: 0.8rem;
-    margin-bottom: 5px;
+    font-size: 0.78rem;
+    margin-bottom: 4px;
   }
 
   .fund-citation {
-    font-size: 0.78rem;
-    margin-bottom: 18px;
+    font-size: 0.75rem;
+    margin-bottom: 14px;
+    max-width: 300px;
   }
 
   .fund-actions {
@@ -851,7 +858,8 @@ a.ev-card {
   .btn-fund,
   .fund-book-btn {
     padding: 10px 22px !important;
-    font-size: 0.85rem !important;
+    font-size: 0.82rem !important;
+    border-radius: 50px !important;
   }
 }
 
