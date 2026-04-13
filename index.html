@@ -2951,10 +2951,13 @@
     // Close menu + scroll on link click
     document.querySelectorAll('.mobile-menu a:not(.mm-divisions)').forEach(a => {
       a.addEventListener('click', function (e) {
-        e.preventDefault();
+        const href = this.getAttribute('href');
         closeMM();
-        const t = document.querySelector(this.getAttribute('href'));
-        if (t) scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' });
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const t = document.querySelector(href);
+          if (t) scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' });
+        }
       });
     });
 
