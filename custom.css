@@ -669,6 +669,34 @@ a.ev-card {
   pointer-events: none;
 }
 
+/* Fund features list */
+.fund-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+.fund-features li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+.fund-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f7a72f;
+}
+
 /* Fund citation & actions — base styles */
 .fund-citation {
   font-size: 0.88rem;
@@ -716,6 +744,16 @@ a.ev-card {
 
   .fund-hl .desc {
     font-size: 0.7rem;
+  }
+
+  .fund-features {
+    text-align: left;
+    padding-left: 8px;
+    margin-bottom: 16px;
+  }
+
+  .fund-features li {
+    font-size: 0.82rem;
   }
 
   .fund-citation {
