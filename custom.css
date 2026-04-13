@@ -795,6 +795,7 @@ a.ev-card {
 @media (max-width: 968px) {
   .fund-content.fund-layout {
     flex-direction: column !important;
+    align-items: stretch !important;
     text-align: center !important;
     padding: 24px 18px !important;
     gap: 18px !important;
