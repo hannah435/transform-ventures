@@ -853,12 +853,22 @@ a.ev-card {
   .fund-features {
     text-align: left !important;
     margin: 0 0 10px !important;
+    width: auto !important;
+    max-width: 300px;
+    align-self: center !important;
   }
 
   .fund-features li {
     font-size: 0.75rem !important;
     margin-bottom: 3px !important;
     line-height: 1.4 !important;
+    padding-left: 14px !important;
+  }
+
+  .fund-features li::before {
+    width: 4px !important;
+    height: 4px !important;
+    top: 7px !important;
   }
 
   .fund-citation {
