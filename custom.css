@@ -1813,6 +1813,18 @@ a.ev-card {
 }
 
 @media (max-width: 640px) {
+  .hero-buttons {
+    gap: 10px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .btn-p,
+  .btn-s {
+    padding: 10px 24px !important;
+    font-size: 0.82rem !important;
+    border-radius: 50px !important;
+  }
+
   .hero-orb-1 {
     width: 200px;
     height: 200px;
