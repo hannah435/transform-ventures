@@ -810,9 +810,8 @@ a.ev-card {
   }
 
   .fund-details-side {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    display: block !important;
+    text-align: center !important;
   }
 
   .fund-details-side .section-label {
@@ -829,12 +828,14 @@ a.ev-card {
     margin-bottom: 10px !important;
     font-size: 0.82rem !important;
     max-width: 300px;
+    margin-left: auto !important;
+    margin-right: auto !important;
     line-height: 1.5;
   }
 
   .fund-highlights {
     gap: 20px !important;
-    margin: 10px 0 !important;
+    margin: 10px auto !important;
     justify-content: center !important;
   }
 
@@ -852,10 +853,9 @@ a.ev-card {
 
   .fund-features {
     text-align: left !important;
-    margin: 0 0 10px !important;
-    width: auto !important;
-    max-width: 300px;
-    align-self: center !important;
+    margin: 0 auto 10px !important;
+    max-width: 280px;
+    padding: 0 !important;
   }
 
   .fund-features li {
@@ -875,6 +875,8 @@ a.ev-card {
     font-size: 0.72rem !important;
     margin-bottom: 12px !important;
     max-width: 280px;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .fund-actions {
