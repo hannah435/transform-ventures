@@ -673,15 +673,59 @@ a.ev-card {
   .fund-layout {
     flex-direction: column !important;
     text-align: center !important;
-    padding: 32px 24px !important;
+    padding: 28px 20px !important;
+    gap: 28px !important;
   }
 
   .fund-book-img {
-    width: 200px;
+    width: 180px;
+  }
+
+  .fund-book-side {
+    gap: 8px;
+  }
+
+  .fund-details-side .section-label {
+    margin-bottom: 4px;
+  }
+
+  .fund-details-side .section-title {
+    margin-bottom: 8px;
+  }
+
+  .fund-details-side .section-desc {
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .fund-details-side .fund-highlights {
     justify-content: center;
+    gap: 24px !important;
+    margin: 16px 0 !important;
+  }
+
+  .fund-hl .val {
+    font-size: 1.5rem !important;
+  }
+
+  .fund-hl .desc {
+    font-size: 0.7rem !important;
+  }
+
+  .fund-details-side p[style] {
+    font-size: 0.82rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  .fund-details-side div[style] {
+    justify-content: center;
+  }
+
+  .btn-fund,
+  .fund-book-btn {
+    padding: 10px 20px !important;
+    font-size: 0.85rem !important;
   }
 }
 
