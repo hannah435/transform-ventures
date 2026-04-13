@@ -771,9 +771,9 @@
         <h2 class="section-title">Bitcoin Supercycle Fund</h2>
         <p class="section-desc">The first liquid bitcoin-only hedge fund combining the "Four Seasons of Bitcoin" cycle model with algorithmic trading and season-specific strategies to maximize returns.</p>
         <div class="fund-highlights">
-          <div class="fund-hl"><div class="val">100%</div><div class="desc">Bitcoin-Only</div></div>
+          <div class="fund-hl"><div class="val fund-counter" data-fund-count="100" data-fund-suffix="%">0%</div><div class="desc">Bitcoin-Only</div></div>
           <div class="fund-hl"><div class="val">Algo</div><div class="desc">Algorithmic Trading</div></div>
-          <div class="fund-hl"><div class="val">4 Seasons</div><div class="desc">Cycle-Driven Model</div></div>
+          <div class="fund-hl"><div class="val fund-counter" data-fund-count="4" data-fund-suffix=" Seasons">0</div><div class="desc">Cycle-Driven Model</div></div>
         </div>
         <ul class="fund-features">
           <li>Seasonal trading signals — sell near cycle peaks, buy near bottoms</li>
@@ -936,6 +936,10 @@ document.querySelectorAll('.nav-links a[href^="#"]').forEach(a=>{
 // Counter
 const co=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const el=en.target,tg=+el.dataset.count;let cur=0;const st=tg/35;const tm=setInterval(()=>{cur+=st;if(cur>=tg){cur=tg;clearInterval(tm)}el.textContent=Math.round(cur)+'+'}, 30);co.unobserve(el)}})},{threshold:.5});
 document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+// Fund counter (100%, 4 Seasons)
+const fo=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const el=en.target,tg=+el.dataset.fundCount,sf=el.dataset.fundSuffix||'',dur=1200,fps=40,frames=dur/(1000/fps);let f=0;const tm=setInterval(()=>{f++;const p=1-Math.pow(1-f/frames,3);const v=Math.round(tg*p);el.textContent=v+sf;if(f>=frames){el.textContent=tg+sf;clearInterval(tm)}},1000/fps);fo.unobserve(el)}})},{threshold:.5});
+document.querySelectorAll('.fund-counter').forEach(el=>fo.observe(el));
 
 // Theme toggle
 const toggle=document.getElementById('themeToggle');
