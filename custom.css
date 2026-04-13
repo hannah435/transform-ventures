@@ -34,7 +34,7 @@
   position: relative;
 }
 
-.hero-social a + a {
+.hero-social a+a {
   border-left: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -83,15 +83,15 @@
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.02);
+  position: relative;
 }
 
 .news-ticker-inner {
-  display: flex;
+  display: inline-flex !important;
   align-items: center;
-  gap: 0;
-  white-space: nowrap;
-  animation: ticker-scroll 40s linear infinite;
-  width: max-content;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  animation: ticker-scroll 45s linear infinite;
 }
 
 .news-ticker:hover .news-ticker-inner {
@@ -99,15 +99,17 @@
 }
 
 .nt-item {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   gap: 8px;
   padding: 0 24px;
   font-size: 0.82rem;
   font-weight: 500;
   color: var(--text-secondary);
-  text-decoration: none;
+  text-decoration: none !important;
   transition: color 0.2s;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
 }
 
 .nt-item:hover {
@@ -123,16 +125,23 @@
 }
 
 .nt-dot {
+  display: inline-block !important;
   width: 4px;
   height: 4px;
+  min-width: 4px;
   border-radius: 50%;
   background: rgba(124, 77, 189, 0.4);
-  flex-shrink: 0;
+  flex-shrink: 0 !important;
 }
 
 @keyframes ticker-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 [data-theme="light"] .news-ticker {
@@ -2185,11 +2194,27 @@ a.ev-card {
 }
 
 @media (max-width: 968px) {
-  .partners-bar { padding: 40px 20px !important; }
-  .partners-logos { gap: 20px 28px; }
-  .partner-logo { height: 22px !important; }
-  .partner-text { font-size: 0.8rem !important; opacity: 0.4 !important; }
-  .partners-label { font-size: 0.65rem !important; margin-bottom: 20px !important; }
+  .partners-bar {
+    padding: 40px 20px !important;
+  }
+
+  .partners-logos {
+    gap: 20px 28px;
+  }
+
+  .partner-logo {
+    height: 22px !important;
+  }
+
+  .partner-text {
+    font-size: 0.8rem !important;
+    opacity: 0.4 !important;
+  }
+
+  .partners-label {
+    font-size: 0.65rem !important;
+    margin-bottom: 20px !important;
+  }
 }
 
 .partner-logo {
@@ -2652,30 +2677,74 @@ a.ev-card {
     grid-template-columns: 1fr 1fr !important;
     gap: 12px !important;
   }
+
   .strat-inner {
     min-height: auto !important;
     padding: 20px 16px !important;
   }
+
   .strat-icon {
     width: 40px !important;
     height: 40px !important;
     margin-bottom: 12px !important;
     font-size: 1rem !important;
   }
-  .strat-inner h4 { font-size: 0.88rem !important; }
-  .strat-inner p { font-size: 0.72rem !important; display: none; }
-  .strat-num-bottom { font-size: 1.5rem !important; margin-top: 10px !important; padding-top: 10px !important; }
-  .strat-card:active { transform: scale(0.96) !important; }
-  .strat-card:active .strat-icon { transform: scale(1.15) !important; }
+
+  .strat-inner h4 {
+    font-size: 0.88rem !important;
+  }
+
+  .strat-inner p {
+    font-size: 0.72rem !important;
+    display: none;
+  }
+
+  .strat-num-bottom {
+    font-size: 1.5rem !important;
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+  }
+
+  .strat-card:active {
+    transform: scale(0.96) !important;
+  }
+
+  .strat-card:active .strat-icon {
+    transform: scale(1.15) !important;
+  }
 
   /* Footer — 2 columns, compact */
-  .ft-top { grid-template-columns: 1fr 1fr !important; gap: 20px 24px !important; margin-bottom: 32px !important; }
-  .ft-brand { grid-column: 1 / -1; }
-  .ft-brand p { display: none; }
-  .ft-brand img { height: 80px !important; margin-bottom: 12px !important; }
-  .ft-col h4 { font-size: 0.68rem !important; margin-bottom: 12px !important; }
-  .ft-col li { margin-bottom: 8px !important; }
-  .ft-col a { font-size: 0.8rem !important; }
+  .ft-top {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px 24px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .ft-brand {
+    grid-column: 1 / -1;
+  }
+
+  .ft-brand p {
+    display: none;
+  }
+
+  .ft-brand img {
+    height: 80px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .ft-col h4 {
+    font-size: 0.68rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .ft-col li {
+    margin-bottom: 8px !important;
+  }
+
+  .ft-col a {
+    font-size: 0.8rem !important;
+  }
 
   .nav-logo img {
     height: 60px !important;
@@ -2683,7 +2752,11 @@ a.ev-card {
 }
 
 /* Font Awesome icon styling */
-.dd-icon i, .dcard-icon i, .cap-icon i, .strat-icon i, .ci-icon i {
+.dd-icon i,
+.dcard-icon i,
+.cap-icon i,
+.strat-icon i,
+.ci-icon i {
   font-size: 1.1rem;
   line-height: 1;
   color: inherit;
