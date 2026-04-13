@@ -1,0 +1,21 @@
+{
+  "name": "Transform Ventures",
+  "short_name": "Transform",
+  "description": "Capital, resources, and strategic guidance for blockchain and cryptocurrency projects.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0518",
+  "theme_color": "#0e0628",
+  "icons": [
+    {
+      "src": "assets/logos/transform-ventures.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logos/transform-ventures.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
