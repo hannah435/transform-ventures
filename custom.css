@@ -1756,6 +1756,11 @@ a.ev-card {
   color: #7c4dbd !important;
 }
 
+/* News link in leadership */
+[data-theme="light"] #leadership a[href="news.html"] {
+  color: #5b2d99 !important;
+}
+
 /* CTA banner readability fixes */
 [data-theme="light"] .cta-banner .btn-p {
   background: linear-gradient(135deg, #2dd4bf, #20b8a5) !important;
