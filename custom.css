@@ -669,7 +669,20 @@ a.ev-card {
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
+/* Fund citation & actions — base styles */
+.fund-citation {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+.fund-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 968px) {
   .fund-layout {
     flex-direction: column !important;
     text-align: center !important;
@@ -685,14 +698,6 @@ a.ev-card {
     gap: 8px;
   }
 
-  .fund-details-side .section-label {
-    margin-bottom: 4px;
-  }
-
-  .fund-details-side .section-title {
-    margin-bottom: 8px;
-  }
-
   .fund-details-side .section-desc {
     margin-bottom: 16px;
     font-size: 0.9rem;
@@ -701,24 +706,24 @@ a.ev-card {
 
   .fund-details-side .fund-highlights {
     justify-content: center;
-    gap: 24px !important;
-    margin: 16px 0 !important;
+    gap: 24px;
+    margin: 16px 0;
   }
 
   .fund-hl .val {
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
   }
 
   .fund-hl .desc {
-    font-size: 0.7rem !important;
+    font-size: 0.7rem;
   }
 
-  .fund-details-side p[style] {
-    font-size: 0.82rem !important;
-    margin-bottom: 16px !important;
+  .fund-citation {
+    font-size: 0.82rem;
+    margin-bottom: 16px;
   }
 
-  .fund-details-side div[style] {
+  .fund-actions {
     justify-content: center;
   }
 
