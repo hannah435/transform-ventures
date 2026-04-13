@@ -1639,7 +1639,124 @@ a.ev-card {
   opacity: 0.6;
 }
 
-/* ===== LIGHT MODE — CTA banner readability fixes ===== */
+/* ===== LIGHT MODE — readability fixes across all sections ===== */
+
+/* Contact form inputs */
+[data-theme="light"] .fg input,
+[data-theme="light"] .fg select,
+[data-theme="light"] .fg textarea {
+  color: #1a1830 !important;
+}
+
+[data-theme="light"] .fg input::placeholder,
+[data-theme="light"] .fg textarea::placeholder {
+  color: #8a8098 !important;
+}
+
+[data-theme="light"] .contact-form .btn-p {
+  background: linear-gradient(135deg, #2dd4bf, #20b8a5) !important;
+  color: #fff !important;
+  border: none !important;
+  text-shadow: none !important;
+}
+
+/* Contact info items */
+[data-theme="light"] .ci-item h4 {
+  color: #1a1830 !important;
+}
+
+[data-theme="light"] .ci-item p,
+[data-theme="light"] .ci-item p a {
+  color: #5a5870 !important;
+}
+
+/* Leadership section */
+[data-theme="light"] .leader-info p {
+  color: #5a5870 !important;
+}
+
+[data-theme="light"] .leader-info .role {
+  color: #7c4dbd !important;
+}
+
+[data-theme="light"] .ltag {
+  color: #5b2d99 !important;
+  border-color: rgba(124, 77, 189, 0.3) !important;
+  background: rgba(124, 77, 189, 0.08) !important;
+}
+
+[data-theme="light"] .la-item {
+  color: #1a1830 !important;
+}
+
+[data-theme="light"] .la-val {
+  color: #5b2d99 !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] .la-lbl {
+  color: #6a6580 !important;
+}
+
+/* Fund section */
+[data-theme="light"] .fund-content {
+  border-color: rgba(247, 167, 47, 0.3) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+[data-theme="light"] .fund-hl .val {
+  color: #c47a0a !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] .fund-features li {
+  color: #5a5870 !important;
+}
+
+[data-theme="light"] .fund-features li::before {
+  background: #c47a0a !important;
+}
+
+[data-theme="light"] .fund-citation {
+  color: #8a8098 !important;
+}
+
+[data-theme="light"] .btn-fund {
+  background: linear-gradient(135deg, #f7a72f, #e8941a) !important;
+  color: #000 !important;
+  border: none !important;
+  text-shadow: none !important;
+  box-shadow: 0 4px 16px rgba(247, 167, 47, 0.3) !important;
+}
+
+[data-theme="light"] .btn-fund:hover {
+  box-shadow: 0 8px 28px rgba(247, 167, 47, 0.4) !important;
+}
+
+[data-theme="light"] .fund-book-btn {
+  color: #915a00 !important;
+  border-color: rgba(247, 167, 47, 0.5) !important;
+  background: rgba(247, 167, 47, 0.1) !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+[data-theme="light"] .fund-book-btn:hover {
+  background: rgba(247, 167, 47, 0.2) !important;
+  color: #1a1830 !important;
+}
+
+[data-theme="light"] .fund-book-badge {
+  color: #915a00 !important;
+  border-color: rgba(247, 167, 47, 0.4) !important;
+}
+
+/* Section labels in light mode */
+[data-theme="light"] .section-label {
+  color: #7c4dbd !important;
+}
+
+/* CTA banner readability fixes */
 [data-theme="light"] .cta-banner .btn-p {
   background: linear-gradient(135deg, #2dd4bf, #20b8a5) !important;
   color: #fff !important;
