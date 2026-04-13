@@ -1639,6 +1639,33 @@ a.ev-card {
   opacity: 0.6;
 }
 
+/* ===== LIGHT MODE — CTA banner readability fixes ===== */
+[data-theme="light"] .cta-banner .btn-p {
+  background: linear-gradient(135deg, #2dd4bf, #20b8a5) !important;
+  color: #fff !important;
+  border: none !important;
+  text-shadow: none !important;
+  box-shadow: 0 4px 16px rgba(45, 212, 191, 0.3) !important;
+}
+
+[data-theme="light"] .cta-banner .btn-p:hover {
+  box-shadow: 0 8px 28px rgba(45, 212, 191, 0.4) !important;
+}
+
+[data-theme="light"] .cta-banner .btn-s {
+  background: rgba(124, 77, 189, 0.1) !important;
+  color: #5b2d99 !important;
+  border: 2px solid rgba(124, 77, 189, 0.4) !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+[data-theme="light"] .cta-banner .btn-s:hover {
+  background: rgba(124, 77, 189, 0.2) !important;
+  color: #3d1570 !important;
+  border-color: rgba(124, 77, 189, 0.6) !important;
+}
+
 /* ===== AMBIENT GLOWS ON ALL SECTIONS (dark mode) ===== */
 [data-theme="dark"] .section,
 [data-theme="dark"] .cta-banner {
