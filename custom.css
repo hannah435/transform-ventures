@@ -76,6 +76,124 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* ===== NEWS STRIP — compact press mentions after hero ===== */
+.news-strip {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.news-strip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.news-strip-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.news-strip-all {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #5eecd5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.news-strip-all:hover {
+  color: #fff;
+  gap: 10px;
+}
+
+.news-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.ns-card {
+  display: block;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ns-card:hover {
+  border-color: rgba(124, 77, 189, 0.4);
+  background: rgba(124, 77, 189, 0.08);
+  transform: translateY(-2px);
+}
+
+.ns-source {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9b6dcc;
+  margin-bottom: 6px;
+}
+
+.ns-title {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--heading);
+  line-height: 1.4;
+}
+
+[data-theme="light"] .news-strip-all {
+  color: #5b2d99 !important;
+}
+
+[data-theme="light"] .news-strip-all:hover {
+  color: #3d1570 !important;
+}
+
+[data-theme="light"] .ns-card {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(124, 77, 189, 0.15);
+}
+
+[data-theme="light"] .ns-card:hover {
+  background: rgba(124, 77, 189, 0.1);
+  border-color: rgba(124, 77, 189, 0.3);
+}
+
+@media (max-width: 968px) {
+  .news-strip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .news-strip {
+    padding: 36px 0;
+  }
+
+  .news-strip-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .ns-card {
+    padding: 14px 16px;
+  }
+
+  .ns-title {
+    font-size: 0.8rem;
+  }
+}
+
 /* ===== GLASSMORPHISM — Enhanced for all cards ===== */
 
 /* Division cards */
