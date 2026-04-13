@@ -3,28 +3,34 @@
    =================================================== */
 
 /* ===== HERO SOCIAL ICONS ===== */
+.hero-buttons {
+  margin-bottom: 28px !important;
+}
+
 .hero-social {
-  display: flex;
-  gap: 20px;
+  display: flex !important;
+  gap: 18px;
   justify-content: center;
-  margin-top: 12px;
-  margin-bottom: 48px;
+  align-items: center;
+  margin-bottom: 44px;
 }
 
 .hero-social a {
-  width: 50px;
-  height: 50px;
-  display: flex;
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px;
+  min-height: 48px;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1.2rem;
-  text-decoration: none;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-size: 1.15rem !important;
+  text-decoration: none !important;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
@@ -35,16 +41,16 @@
   position: absolute;
   inset: 0;
   border-radius: 14px;
-  background: linear-gradient(135deg, rgba(124, 77, 189, 0.3), rgba(45, 212, 191, 0.3));
+  background: linear-gradient(135deg, rgba(124, 77, 189, 0.35), rgba(45, 212, 191, 0.35));
   opacity: 0;
   transition: opacity 0.35s ease;
 }
 
 .hero-social a:hover {
   border-color: rgba(124, 77, 189, 0.5);
-  color: #fff;
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(124, 77, 189, 0.3), 0 0 40px rgba(124, 77, 189, 0.1);
+  color: #fff !important;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 28px rgba(124, 77, 189, 0.35), 0 0 50px rgba(124, 77, 189, 0.12);
 }
 
 .hero-social a:hover::before {
@@ -54,6 +60,22 @@
 .hero-social a i {
   position: relative;
   z-index: 1;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .hero-social {
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .hero-social a {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.05rem !important;
+  }
 }
 
 /* ===== GLASSMORPHISM — Enhanced for all cards ===== */
