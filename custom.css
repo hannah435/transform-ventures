@@ -1946,28 +1946,26 @@ a.ev-card {
   background: linear-gradient(180deg, #0a0720 0%, #160a4a 50%, #0a0720 100%);
 }
 
-/* Right side glow */
+/* Glow overlays combined with gradient bg */
 [data-theme="dark"] #divisions,
-[data-theme="dark"] #about,
 [data-theme="dark"] #events,
-[data-theme="dark"] #capital,
 [data-theme="dark"] #strategies,
 [data-theme="dark"] #fund,
-[data-theme="dark"] #leadership,
 [data-theme="dark"] #contact,
 [data-theme="dark"] .cta-banner {
-  background-image:
+  background:
     radial-gradient(ellipse 300px 300px at 90% 20%, rgba(124, 77, 189, 0.08), transparent),
-    radial-gradient(ellipse 250px 250px at 10% 80%, rgba(45, 212, 191, 0.06), transparent);
+    radial-gradient(ellipse 250px 250px at 10% 80%, rgba(45, 212, 191, 0.06), transparent),
+    linear-gradient(180deg, #08051a 0%, #120840 50%, #08051a 100%) !important;
 }
 
-/* Alternate glow positions per section */
 [data-theme="dark"] #about,
 [data-theme="dark"] #capital,
 [data-theme="dark"] #leadership {
-  background-image:
+  background:
     radial-gradient(ellipse 280px 280px at 85% 70%, rgba(45, 212, 191, 0.07), transparent),
-    radial-gradient(ellipse 300px 300px at 8% 25%, rgba(124, 77, 189, 0.08), transparent);
+    radial-gradient(ellipse 300px 300px at 8% 25%, rgba(124, 77, 189, 0.08), transparent),
+    linear-gradient(180deg, #0a0720 0%, #160a4a 50%, #0a0720 100%) !important;
 }
 
 /* Fund section — gold glows */
