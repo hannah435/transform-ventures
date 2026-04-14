@@ -1146,7 +1146,6 @@ a.ev-card {
 [data-theme="dark"] .dcard:hover,
 [data-theme="dark"] .ev-card:hover,
 [data-theme="dark"] .stat-box:hover,
-[data-theme="dark"] .strat-card:hover,
 [data-theme="dark"] .cap-feat:hover,
 [data-theme="dark"] .la-item:hover,
 [data-theme="dark"] .ci-item:hover {
@@ -1158,6 +1157,31 @@ a.ev-card {
     0 16px 40px rgba(0, 0, 0, 0.35),
     inset 0 1px 0 rgba(124, 77, 189, 0.25),
     inset 0 0 30px rgba(124, 77, 189, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Strategy cards — per-card accent border on hover */
+[data-theme="dark"] .strat-card:nth-child(1):hover {
+  border-color: rgba(124, 77, 189, 0.6) !important;
+  box-shadow: 0 0 20px rgba(124, 77, 189, 0.25), 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 0 25px rgba(124, 77, 189, 0.08);
+  transform: translateY(-4px);
+}
+
+[data-theme="dark"] .strat-card:nth-child(2):hover {
+  border-color: rgba(45, 212, 191, 0.6) !important;
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.25), 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 0 25px rgba(45, 212, 191, 0.08);
+  transform: translateY(-4px);
+}
+
+[data-theme="dark"] .strat-card:nth-child(3):hover {
+  border-color: rgba(59, 130, 246, 0.6) !important;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.25), 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 0 25px rgba(59, 130, 246, 0.08);
+  transform: translateY(-4px);
+}
+
+[data-theme="dark"] .strat-card:nth-child(4):hover {
+  border-color: rgba(247, 167, 47, 0.6) !important;
+  box-shadow: 0 0 20px rgba(247, 167, 47, 0.25), 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 0 25px rgba(247, 167, 47, 0.08);
   transform: translateY(-4px);
 }
 
