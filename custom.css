@@ -1160,6 +1160,11 @@ a.ev-card {
   transform: translateY(-4px);
 }
 
+/* Strategy card inner — transparent glass instead of solid black */
+[data-theme="dark"] .strat-inner {
+  background: linear-gradient(145deg, rgba(40, 18, 80, 0.6), rgba(20, 8, 50, 0.7)) !important;
+}
+
 /* Strategy cards — per-card accent border on hover */
 [data-theme="dark"] .strat-card:nth-child(1):hover {
   border-color: rgba(124, 77, 189, 0.6) !important;
