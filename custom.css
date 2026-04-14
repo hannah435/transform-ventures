@@ -1476,24 +1476,29 @@ a.ev-card {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-/* Fund section — golden neon INTENSE */
+/* Fund section — purple glass with gold accent border */
 [data-theme="dark"] .fund-content {
-  border: 3px solid rgba(247, 167, 47, 0.5) !important;
+  background: linear-gradient(145deg, rgba(40, 18, 80, 0.7), rgba(20, 8, 50, 0.8)) !important;
+  border: 2px solid rgba(247, 167, 47, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   box-shadow:
-    0 0 20px rgba(247, 167, 47, 0.15),
-    0 0 50px rgba(247, 167, 47, 0.08),
-    0 0 100px rgba(247, 167, 47, 0.04),
-    inset 0 0 30px rgba(247, 167, 47, 0.03);
+    0 4px 24px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(247, 167, 47, 0.1),
+    inset 0 1px 0 rgba(124, 77, 189, 0.15),
+    inset 0 0 20px rgba(124, 77, 189, 0.05);
   transition: all 0.3s ease;
 }
 
 [data-theme="dark"] .fund-content:hover {
-  border-color: rgba(247, 167, 47, 0.8) !important;
+  background: linear-gradient(145deg, rgba(50, 22, 100, 0.8), rgba(30, 12, 65, 0.85)) !important;
+  border-color: rgba(247, 167, 47, 0.65) !important;
   box-shadow:
-    0 0 30px rgba(247, 167, 47, 0.25),
-    0 0 70px rgba(247, 167, 47, 0.12),
-    0 0 120px rgba(247, 167, 47, 0.06),
-    inset 0 0 40px rgba(247, 167, 47, 0.04);
+    0 0 25px rgba(247, 167, 47, 0.2),
+    0 0 60px rgba(247, 167, 47, 0.08),
+    0 16px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(124, 77, 189, 0.25),
+    inset 0 0 30px rgba(124, 77, 189, 0.08);
 }
 
 [data-theme="dark"] .fund-hl .val {
