@@ -1123,32 +1123,42 @@ a.ev-card {
    =================================================== */
 
 /* Neon glow on division cards */
-[data-theme="dark"] .dcard {
+/* Purple glassmorphic cards — dark mode */
+[data-theme="dark"] .dcard,
+[data-theme="dark"] .ev-card,
+[data-theme="dark"] .stat-box,
+[data-theme="dark"] .strat-card,
+[data-theme="dark"] .cap-feat,
+[data-theme="dark"] .la-item,
+[data-theme="dark"] .ci-item {
+  background: linear-gradient(145deg, rgba(40, 18, 80, 0.7), rgba(20, 8, 50, 0.8)) !important;
+  border: 1px solid rgba(124, 77, 189, 0.3) !important;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(124, 77, 189, 0.15),
+    inset 0 0 20px rgba(124, 77, 189, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-[data-theme="dark"] .dcard:hover {
+[data-theme="dark"] .dcard:hover,
+[data-theme="dark"] .ev-card:hover,
+[data-theme="dark"] .stat-box:hover,
+[data-theme="dark"] .strat-card:hover,
+[data-theme="dark"] .cap-feat:hover,
+[data-theme="dark"] .la-item:hover,
+[data-theme="dark"] .ci-item:hover {
+  background: linear-gradient(145deg, rgba(50, 22, 100, 0.8), rgba(30, 12, 65, 0.85)) !important;
+  border-color: rgba(124, 77, 189, 0.55) !important;
   box-shadow:
-    0 0 20px rgba(124, 77, 189, 0.15),
-    0 0 60px rgba(124, 77, 189, 0.08),
-    0 20px 50px rgba(0, 0, 0, 0.3);
-  border-color: rgba(124, 77, 189, 0.3);
-}
-
-[data-theme="dark"] .dcard:nth-child(2):hover {
-  box-shadow:
-    0 0 20px rgba(45, 212, 191, 0.15),
-    0 0 60px rgba(45, 212, 191, 0.08),
-    0 20px 50px rgba(0, 0, 0, 0.3);
-  border-color: rgba(45, 212, 191, 0.3);
-}
-
-[data-theme="dark"] .dcard:nth-child(3):hover {
-  box-shadow:
-    0 0 20px rgba(247, 167, 47, 0.15),
-    0 0 60px rgba(247, 167, 47, 0.08),
-    0 20px 50px rgba(0, 0, 0, 0.3);
-  border-color: rgba(247, 167, 47, 0.3);
+    0 0 20px rgba(124, 77, 189, 0.2),
+    0 0 50px rgba(124, 77, 189, 0.08),
+    0 16px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(124, 77, 189, 0.25),
+    inset 0 0 30px rgba(124, 77, 189, 0.08);
+  transform: translateY(-4px);
 }
 
 /* Neon glow icons in dark mode */
@@ -1156,48 +1166,7 @@ a.ev-card {
   box-shadow: 0 0 20px rgba(124, 77, 189, 0.5), 0 0 40px rgba(124, 77, 189, 0.2);
 }
 
-[data-theme="dark"] .dcard:nth-child(2):hover .dcard-icon {
-  box-shadow: 0 0 20px rgba(45, 212, 191, 0.5), 0 0 40px rgba(45, 212, 191, 0.2);
-}
-
-[data-theme="dark"] .dcard:nth-child(3):hover .dcard-icon {
-  box-shadow: 0 0 20px rgba(247, 167, 47, 0.5), 0 0 40px rgba(247, 167, 47, 0.2);
-}
-
-/* Event cards — always neon glow */
-[data-theme="dark"] .ev-card {
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-[data-theme="dark"] .ev-card:nth-child(1) {
-  border: 2px solid rgba(124, 77, 189, 0.6);
-  box-shadow: 0 0 20px rgba(124, 77, 189, 0.2), 0 0 50px rgba(124, 77, 189, 0.1), 0 0 80px rgba(124, 77, 189, 0.05);
-}
-
-[data-theme="dark"] .ev-card:nth-child(1):hover {
-  border-color: rgba(124, 77, 189, 0.9);
-  box-shadow: 0 0 30px rgba(124, 77, 189, 0.35), 0 0 70px rgba(124, 77, 189, 0.15), 0 0 100px rgba(124, 77, 189, 0.08), 0 20px 50px rgba(0, 0, 0, 0.3);
-}
-
-[data-theme="dark"] .ev-card:nth-child(2) {
-  border: 2px solid rgba(124, 77, 189, 0.6);
-  box-shadow: 0 0 20px rgba(124, 77, 189, 0.2), 0 0 50px rgba(124, 77, 189, 0.1), 0 0 80px rgba(124, 77, 189, 0.05);
-}
-
-[data-theme="dark"] .ev-card:nth-child(2):hover {
-  border-color: rgba(124, 77, 189, 0.9);
-  box-shadow: 0 0 30px rgba(124, 77, 189, 0.35), 0 0 70px rgba(124, 77, 189, 0.15), 0 0 100px rgba(124, 77, 189, 0.08), 0 20px 50px rgba(0, 0, 0, 0.3);
-}
-
-[data-theme="dark"] .ev-card:nth-child(3) {
-  border: 2px solid rgba(124, 77, 189, 0.6);
-  box-shadow: 0 0 20px rgba(124, 77, 189, 0.2), 0 0 50px rgba(124, 77, 189, 0.1), 0 0 80px rgba(124, 77, 189, 0.05);
-}
-
-[data-theme="dark"] .ev-card:nth-child(3):hover {
-  border-color: rgba(124, 77, 189, 0.9);
-  box-shadow: 0 0 30px rgba(124, 77, 189, 0.35), 0 0 70px rgba(124, 77, 189, 0.15), 0 0 100px rgba(124, 77, 189, 0.08), 0 20px 50px rgba(0, 0, 0, 0.3);
-}
+/* Event cards — handled by unified purple glass rule above */
 
 /* Event banners — brighter */
 [data-theme="dark"] .ev-banner {

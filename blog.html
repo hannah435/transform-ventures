@@ -148,14 +148,17 @@
       .blog-hero h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
     }
     [data-theme="dark"] .blog-card {
-      border: 1px solid rgba(124, 77, 189, 0.25);
-      background: rgba(20, 10, 40, 0.6);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: linear-gradient(145deg, rgba(40, 18, 80, 0.7), rgba(20, 8, 50, 0.8));
+      border: 1px solid rgba(124, 77, 189, 0.3);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(124, 77, 189, 0.15), inset 0 0 20px rgba(124, 77, 189, 0.05);
     }
     [data-theme="dark"] .blog-card:hover {
-      border-color: rgba(124, 77, 189, 0.5);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(124, 77, 189, 0.15);
+      background: linear-gradient(145deg, rgba(50, 22, 100, 0.8), rgba(30, 12, 65, 0.85));
+      border-color: rgba(124, 77, 189, 0.55);
+      box-shadow: 0 0 20px rgba(124, 77, 189, 0.2), 0 0 50px rgba(124, 77, 189, 0.08), 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(124, 77, 189, 0.25), inset 0 0 30px rgba(124, 77, 189, 0.08);
+      transform: translateY(-4px);
     }
     [data-theme="light"] .blog-back { color: #5a5870; }
     [data-theme="light"] .blog-back:hover { color: #5b2d99; }
