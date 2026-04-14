@@ -1846,6 +1846,65 @@ a.ev-card {
   color: #5b2d99 !important;
 }
 
+/* Global button light mode fixes */
+[data-theme="light"] .btn-p {
+  background: linear-gradient(135deg, #2dd4bf, #20b8a5) !important;
+  color: #fff !important;
+  border: none !important;
+  text-shadow: none !important;
+  box-shadow: 0 4px 16px rgba(45, 212, 191, 0.3) !important;
+}
+
+[data-theme="light"] .btn-p:hover {
+  box-shadow: 0 8px 28px rgba(45, 212, 191, 0.4) !important;
+}
+
+[data-theme="light"] .btn-s {
+  background: rgba(124, 77, 189, 0.1) !important;
+  color: #5b2d99 !important;
+  border: 2px solid rgba(124, 77, 189, 0.4) !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+[data-theme="light"] .btn-s:hover {
+  background: rgba(124, 77, 189, 0.2) !important;
+  color: #3d1570 !important;
+  border-color: rgba(124, 77, 189, 0.6) !important;
+}
+
+/* Strategy card numbers */
+[data-theme="light"] .sn-1 { color: #5b2d99 !important; }
+[data-theme="light"] .sn-2 { color: #18a898 !important; }
+[data-theme="light"] .sn-3 { color: #1d4ed8 !important; }
+[data-theme="light"] .sn-4 { color: #c47a0a !important; }
+
+/* Strategy card borders */
+[data-theme="light"] .strat-inner {
+  border: 1px solid rgba(124, 77, 189, 0.2) !important;
+}
+
+[data-theme="light"] .strat-num-bottom {
+  border-top-color: rgba(124, 77, 189, 0.2) !important;
+}
+
+/* Event visit link */
+[data-theme="light"] .ev-visit {
+  color: #5b2d99 !important;
+}
+
+[data-theme="light"] .ev-card:hover .ev-visit {
+  color: #3d1570 !important;
+  text-shadow: none !important;
+}
+
+/* Glass card borders — purple instead of white */
+[data-theme="light"] .about-visual,
+[data-theme="light"] .cap-visual,
+[data-theme="light"] .ci-item {
+  border: 1px solid rgba(124, 77, 189, 0.15) !important;
+}
+
 /* CTA banner readability fixes */
 [data-theme="light"] .cta-banner .btn-p {
   background: linear-gradient(135deg, #2dd4bf, #20b8a5) !important;
